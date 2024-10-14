@@ -10,9 +10,9 @@ __ sentinel-dashboard-datasource<br/>
 &nbsp; |__ sentinel-dashboard-datasource-nacos (jar) <br/>
 &nbsp; |__ sentinel-dashboard-bridge（boot）<br/>
 
-#### sentinel-dashboard 是拷贝来自官方原模块，在本方案中视为后端模块。
-#### sentinel-dashboard-datasource-nacos 是基于扩展机制实现配置持久化的模块。如：sentinel流控、熔断降级规则。
-#### sentinel-dashboard-bridge 是真正构建和部署的控制台应用。其主要作用是前端模块，链接持久化模块。
+-sentinel-dashboard 是拷贝来自官方原模块，在本方案中视为后端模块，作为被依赖的jar包。<br/>
+-sentinel-dashboard-datasource-nacos 是基于扩展机制实现配置持久化的模块。如：sentinel流控、熔断降级规则，作为被依赖的jar包。<br/>
+-sentinel-dashboard-bridge 是真正构建和部署的控制台应用。其主要作用是前端模块，链接持久化模块。作为执行应用软件包。<br/>
 
 ## 1. 实现过程（仅应用，请忽略该章节）
 
@@ -72,13 +72,13 @@ __ sentinel-dashboard-datasource<br/>
 
 ## 2. 编译和启动
 
-### 1.1 如何编译&打包
+### 2.1 如何编译&打包
 
 ```bash
 mvn clean package
 ```
 
-### 1.2 如何启动
+### 2.2 如何启动
 
 使用如下命令启动编译后的控制台：
 
@@ -91,15 +91,11 @@ java -Dserver.port=8722 \
 -jar target/sentinel-dashboard-bridge-1.0.0-SNAPSHOT.jar
 ```
 
-### 1.3 如何访问
+### 2.3 如何访问
 
 ```html
-http://localhost:8722/#/dashboard/v3/degrade/app-demo-service-provider
+http://localhost:8722/#/dashboard/home
 ```
 
-### 1.4 展示
-```
-![img.png](img.png)
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
-```
+### 2.4 展示
+![md_display.png](md_display.png)![md_display_1.png](md_display_1.png)![md_display_2.png](md_display_2.png)
