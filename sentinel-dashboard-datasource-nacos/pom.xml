@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-dashboard</artifactId>
-            <classifier>compile</classifier>
+            <classifier>backend</classifier>
             <version>${sentinel.version}</version>
         </dependency>
 
