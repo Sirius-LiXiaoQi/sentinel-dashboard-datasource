@@ -116,4 +116,4 @@ http://localhost:8722/#/dashboard/home
 ```
 
 ### 2.4 展示
-![md_display.png](md_display.png)![md_display_1.png](md_display_1.png)![md_display_2.png](md_display_2.png)
+![md_display_1.png](md_display_1.png)![md_display_2.png](md_display_2.png)![md_display_3.png](md_display_3.png)
