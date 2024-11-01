@@ -53,6 +53,11 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
         </plugins>
 
         <resources>
@@ -69,7 +74,15 @@
             </resource>
         </resources>
 
+
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Sirius-LiXiaoQi/sentinel-dashboard-datasource</url>
+        </repository>
+    </distributionManagement>
 
 </project>
